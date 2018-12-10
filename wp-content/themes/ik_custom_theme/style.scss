@@ -1,0 +1,199 @@
+/* Dit is de style van het custom theme voor inspiratiekinderopvang */
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("assets/fonts/RobotoSlab-Light.ttf");
+}
+@font-face {
+  font-family: "Amatic SC";
+  src: url("assets/fonts/AmaticSC-Regular.ttf");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/segoeuil.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/seguili.ttf");
+  font-style: italic;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/segoeuisl.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/seguisli.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/segoeui.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/segoeuii.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/seguisb.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/seguisbi.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("assets/fonts/segoeuib.ttf");
+  font-weight: 900;
+}
+
+// colors
+$blue: #A3D4CF;
+$pink: #FCEAE4;
+$yellow: #E9C73B;
+$red: #ff561d;
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: #999;
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav ul li{
+  margin-right: 4em;
+}
+
+.logo-type{
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.5em;
+  width:10%;
+  margin-left: 1.5em;
+}
+
+.full{
+  height: 100vh;
+}
+
+.explanation{
+  p{
+    margin-top: 2em;
+    max-width: 25em;
+    line-height: 1.5
+  }
+}
+
+.what{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .squirel{
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 8em;
+  }
+}
+
+h2{
+  font-weight: 900;
+  font-size: 180%;
+  max-width: 20em;
+  line-height: 1.2
+}
+
+button.cta{
+  margin-top: 1.5em;
+  color: white;
+  background-color: $yellow;
+  padding: 1.2em;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-size: 125%;
+  font-family: 'Segoe UI';
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+button.cta:hover{
+  -webkit-box-shadow: 0px 30px 55px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 30px 55px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 30px 55px 0px rgba(0,0,0,0.1);
+  transition: all 200ms;
+}
+
+.why{
+  background-image: url('assets/images/vorming.png');
+  background-size:cover;
+  display: flex;
+  justify-content: flex-end;
+
+  .explanation{
+    background-color: white;
+    padding: 2em;
+    width: 20em;
+    align-self: center;
+    margin-right: 8em;
+  }
+}
+
+button.minor{
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 2em;
+  padding: 1.5em;
+  width: 100%;
+  border: 1px solid $red;
+  color: $red;
+  background-color: rgba(0,0,0,0);
+  text-transform: uppercase;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+ .explanation:after{
+  content: ' ';
+  display: block;
+  background-color: $red;
+  width: 100%;
+  height: 50
+}

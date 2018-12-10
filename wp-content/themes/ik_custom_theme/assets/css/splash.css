@@ -1,0 +1,156 @@
+
+
+.front-splash{
+  background-color: #FCEAE4;;
+  height: 90vh;
+  background-image: url('../images/Achtergrond extra.png');
+  background-size: 50% 20vh;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+
+.fs_element{
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+}
+
+// styles for the front splash page
+.bee {
+  background-image: url('../images/bij.png');
+  height: 10vh;
+  width: 10vh;
+  top: 30vh;
+  left: 80vw;
+}
+
+.plant-1{
+  background-image: url('../images/plant 1.png');
+  height: 20vh;
+  width: 20vh;
+  left:0;
+  bottom: 0;
+}
+
+.plant-2{
+  background-image: url('../images/plant 2.png');
+  height: 25vh;
+  width: 25vh;
+  right: -138px;
+  bottom: 0;
+}
+
+.plant-3{
+  background-image: url('../images/plant 3.png');
+  height: 35vh;
+  width: 35vh;
+  left: 0;
+  bottom: 14vh;
+}
+
+.plant-4{
+  background-image: url('../images/plant 4.png');
+  height: 15vh;
+  width: 15vh;
+  right: -42px;
+  bottom: 14vh;
+}
+
+.plant-5{
+  background-image: url('../images/plant 5.png');
+  height: 15vh;
+  width: 15vh;
+  left: 50vw;
+  bottom: 14vh;
+}
+
+.turtle {
+  background-image: url('../images/schildpadden.png');
+  height: 30vh;
+  width: 30vh;
+  left: 150px;
+  bottom: 6vh;
+}
+
+.worm {
+  background-image: url('../images/worm.png');
+  height: 10vh;
+  width: 10vh;
+  left: 366px;
+  bottom: 8vh;
+}
+
+.banner_container{
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.string{
+  background-color: #AAA;
+  width: 28vw;
+  height: 2px;
+  position: relative;
+  top: 43px;
+}
+
+.string:nth-of-type(3){
+  left:-2px !important;
+  top: 44px !important;
+}
+
+.banner{
+  background-image: url('../images/slinger.png');
+  height: 115px;
+  min-width: 750px;
+  left: 20vw;
+  position: inherit;
+}
+
+.text {
+  position: relative;
+  top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text p{
+  font-family: 'Amatic SC';
+  font-size: 250%;
+  padding-left: 2vw;
+  color: #ff561d;;
+}
+
+.kinderopvang{
+  background-image: url('../images/kinderopvang.png');
+  height: 300px;
+  width: 300px;
+  left: 25vw;
+  top: 13vh;
+}
+
+.squirel{
+  background-image: url('../images/eekhoorn.png');
+  height: 55vh;
+  width: 55vh;
+  left: 25vw;
+  bottom: 13vh;
+}
+
+.pheasant{
+  background-image: url('../images/fazant.png');
+  height: 25vh;
+  width: 25vh;
+  right: 15vw;
+  bottom: 1vh;
+}
+
+.dog{
+  background-image: url('../images/hond.png');
+  height: 60vh;
+  width: 60vh;
+  left: 50vw;
+  bottom: 1vh;
+}
