@@ -24,4 +24,7 @@ function ik_theme_setup() {
 
 add_action( 'after_setup_theme', 'ik_theme_setup' );
 
+// allow post thumbnails
+add_theme_support('post-thumbnails');
+
 ?>

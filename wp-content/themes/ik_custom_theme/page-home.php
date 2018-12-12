@@ -39,7 +39,7 @@ get_header();?>
   </div>
   <section class="full what">
     <div class="explanation">
-      <h2>Inspiratiedag kinderopvang <br>is het grootste evenement <br>voor kinderopvanginitiatieven</h2>
+      <h1>Inspiratiedag kinderopvang <br>is het grootste evenement <br>voor kinderopvanginitiatieven</h1>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
       <button type="button" name="Schrijf je nu in!" class="cta">Schrijf je nu in</button>
     </div>
@@ -51,6 +51,39 @@ get_header();?>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
       <button type="button" name="Maak jouw programma" class="minor">Maak jouw programma</button>
     </div>
+  </section>
+  <section class="full extra">
+    <section class="main" role="main">
+    <h2>Praktische informatie</h2>
+      <div class="content">
+        <div class="pi_box_outer">
+          <h3>Locatie</h3>
+          <div class="pi_box_inner location">
+            <p class="large">ICC GENT</p>
+            <p class="small">Van Rysselberghedreef 2</p>
+            <p class="small">Bus 1 - Citadelpark</p>
+            <p class="small">9000 Gent</p>
+          </div>
+        </div>
+        <div class="pi_box_outer">
+          <h3>Prijs</h3>
+          <div class="pi_box_inner price">
+            <p class="large">&euro; 250;-</p>
+            <p class="small">per persoon</p>
+            <p class="large">&euro; 1000;-</p>
+            <p class="small">vanaf 5 personen</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="aside" role="aside">
+      <div class="wistjedatje">
+        <h2>Wist je dat ...?</h2>
+        <p>… er vorig jaar 122 goede praktijken van 66 verschillende gemeentes en initiatieven met 6.000 aanwezigen gedeeld werden?</p>
+        <button type="button" name="button" class="minor">MEER WEETJES</button>
+      </div>
+    </section>
+    </section>
   </section>
 </main>
 

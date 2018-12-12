@@ -16,11 +16,13 @@
 
  get_header();
  ?>
-
- <div class="index_error">
-  <p>Dit is de index.php pagina.</p>
-  <p>Bij leven en welzijn zou je deze niet mogen zien.</p>
-  <p><a href="<?php get_home_url(); ?>">Neem me gewoon terug naar de hoofdpagina!</a></p>
- </div>
- 
+ <main>
+   <section class="full">
+     <div class="index_error">
+      <p>Dit is de index.php pagina.</p>
+      <p>Bij leven en welzijn zou je deze niet mogen zien.</p>
+      <p><a href="<?php echo get_home_url(); ?>">Neem me gewoon terug naar de hoofdpagina!</a></p>
+     </div>
+   </section>
+ </main>
 <?php get_footer(); ?>

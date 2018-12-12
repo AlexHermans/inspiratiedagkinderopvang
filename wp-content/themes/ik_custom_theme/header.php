@@ -24,7 +24,7 @@
      </head>
      <body <?php body_class(); ?>>
        <header>
-         <h1 class="logo-type">inspiratiedag kinderopvang</h1>
+         <h1 class="logo-type"><a href="<?php echo get_home_url(); ?>">inspiratiedag kinderopvang</a></h1>
          <nav>
            <?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
          </nav>
