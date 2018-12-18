@@ -37,7 +37,7 @@ Plugin Name: NIET_VERWIJDEREN_IK_SSP_register_custom_post_types
     		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
       );
 
-    register_post_type('sessies',$args);
+    register_post_type('sessie',$args);
   }
 
   function ik_create_post_type_praktijk(){
@@ -65,15 +65,16 @@ Plugin Name: NIET_VERWIJDEREN_IK_SSP_register_custom_post_types
     		'show_ui'            => true,
     		'show_in_menu'       => true,
     		'query_var'          => true,
-    		'rewrite'            => array( 'slug' => 'sessie' ),
+    		'rewrite'            => array( 'slug' => 'praktijk' ),
     		'capability_type'    => 'post',
     		'has_archive'        => true,
     		'hierarchical'       => false,
     		'menu_position'      => null,
+        'taxonomies'         => array('category'),
     		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
       );
 
-    register_post_type('praktijken',$args);
+    register_post_type('praktijk',$args);
   }
 
   add_action('init', 'ik_create_post_type_session');

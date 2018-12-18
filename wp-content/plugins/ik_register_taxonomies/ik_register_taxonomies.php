@@ -27,7 +27,7 @@ function ik_create_time_taxonomy() {
 		'rewrite'           => array( 'slug' => 'tijdsvak' ),
 	);
 
-	register_taxonomy( 'tijdsvakken', array( 'sessies' ), $args );
+	register_taxonomy( 'tijdsvakken', array( 'sessie' ), $args );
 };
 
 function ik_create_round_taxonomy() {
@@ -55,35 +55,7 @@ function ik_create_round_taxonomy() {
 		'rewrite'           => array( 'slug' => 'ronde'),
 	);
 
-	register_taxonomy( 'rondes', array( 'sessies' ), $args );
-};
-
-function ik_create_target_audience_taxonomy() {
-	// Add new taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x( 'Doelgroepen', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Doelgroep', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Zoek Doelgroepen', 'textdomain' ),
-		'all_items'         => __( 'Alle Doelgroepen', 'textdomain' ),
-		'parent_item'       => __( 'Bovenliggende Doelgroep', 'textdomain' ),
-		'parent_item_colon' => __( 'Bovenliggend Doelgroep:', 'textdomain' ),
-		'edit_item'         => __( 'Bewerk Doelgroep', 'textdomain' ),
-		'update_item'       => __( 'Update Doelgroep', 'textdomain' ),
-		'add_new_item'      => __( 'Voeg nieuw Doelgroep toe', 'textdomain' ),
-		'new_item_name'     => __( 'Nieuwe Doelgroep naam', 'textdomain' ),
-		'menu_name'         => __( 'Doelgroep', 'textdomain' ),
-	);
-
-	$args = array(
-		'hierarchical'      => false,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'doelgoep'),
-	);
-
-	register_taxonomy( 'doelgroepen', array( 'sessies' ), $args );
+	register_taxonomy( 'rondes', array( 'sessie' ), $args );
 };
 
 function ik_create_location_taxonomy() {
@@ -111,7 +83,7 @@ function ik_create_location_taxonomy() {
 		'rewrite'           => array( 'slug' => 'locatie'),
 	);
 
-	register_taxonomy( 'locaties', array( 'sessies' ), $args );
+	register_taxonomy( 'locaties', array( 'sessie' ), $args );
 };
 
 function ik_create_session_type_taxonomy() {
@@ -139,13 +111,41 @@ function ik_create_session_type_taxonomy() {
 		'rewrite'           => array( 'slug' => 'sessie_type'),
 	);
 
-	register_taxonomy( 'sessie_types', array( 'sessies' ), $args );
+	register_taxonomy( 'sessie_types', array( 'sessie' ), $args );
+};
+
+function ik_create_praktijk_type_taxonomy() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Praktijk Types', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Praktijk Type', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Zoek Praktijk Types', 'textdomain' ),
+		'all_items'         => __( 'Alle Praktijk Types', 'textdomain' ),
+		'parent_item'       => __( 'Bovenliggend Praktijk Type', 'textdomain' ),
+		'parent_item_colon' => __( 'Bovenliggend Praktijk Type:', 'textdomain' ),
+		'edit_item'         => __( 'Bewerk Praktijk Type', 'textdomain' ),
+		'update_item'       => __( 'Update Praktijk Type', 'textdomain' ),
+		'add_new_item'      => __( 'Voeg nieuw Praktijk Type toe', 'textdomain' ),
+		'new_item_name'     => __( 'Nieuwe Praktijk Type naam', 'textdomain' ),
+		'menu_name'         => __( 'Praktijk Type', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => false,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'praktijk_type'),
+	);
+
+	register_taxonomy( 'praktijk_types', array( 'praktijk' ), $args );
 };
 
 add_action('init', 'ik_create_time_taxonomy');
 add_action('init', 'ik_create_round_taxonomy');
-add_action('init', 'ik_create_target_audience_taxonomy');
 add_action('init', 'ik_create_location_taxonomy');
 add_action('init', 'ik_create_session_type_taxonomy');
+add_action('init', 'ik_create_praktijk_type_taxonomy');
 
 ?>
