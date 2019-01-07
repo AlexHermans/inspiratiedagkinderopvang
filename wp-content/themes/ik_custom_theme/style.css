@@ -322,9 +322,25 @@ footer {
     margin-bottom: 5vh;
     left: 2vw; }
 
+.error {
+  color: red;
+  background-color: yellow; }
+
 .line_up_outer {
   flex-direction: column;
-  height: auto !important; }
+  height: auto !important;
+  position: relative; }
+  .line_up_outer button.minor {
+    position: fixed;
+    BOTTOM: 2em;
+    right: 2em;
+    width: initial;
+    text-transform: initial;
+    padding: 1em 1.5em;
+    transition: all 250ms; }
+    .line_up_outer button.minor:hover {
+      background-color: #ff561d;
+      color: white; }
 
 .line-up {
   width: 45vw;
@@ -368,7 +384,7 @@ footer {
     border-radius: 5px;
     flex: 3;
     cursor: pointer;
-    transition: all 200ms; }
+    transition: margin 200ms; }
     .line-up .session_field_inner.unselected:hover {
       margin-left: 2em; }
   .line-up .helper {
@@ -397,5 +413,10 @@ footer {
 @keyframes float {
   50% {
     top: -3vh; } }
+.loading {
+  background-image: url(assets/images/loader.gif);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */

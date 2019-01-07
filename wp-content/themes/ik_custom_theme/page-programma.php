@@ -85,7 +85,7 @@ get_header();?>
         </div>
     </section>
     <div class="button_container">
-      <a href="<?php echo get_post_type_archive_link('sessie'); ?>"><button type="button" name="button_sessie_archive" class="minor">Alle sessies</button></a>
+      <a href="<?php echo get_post_type_archive_link('sessie'); ?>"><button type="button" name="button_sessie_archive" class="minor">Kies uit alle sessies</button></a>
     </div>
   </section>
 </main>

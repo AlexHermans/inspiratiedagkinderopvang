@@ -433,10 +433,31 @@ footer{
   }
 }
 
+.error{
+  color: red;
+  background-color: yellow;
+}
+
 // Voor programma
 .line_up_outer{
   flex-direction: column;
   height: auto !important;
+  position: relative;
+
+  button.minor{
+    position: fixed;
+    BOTTOM: 2em;
+    right: 2em;
+    width: initial;
+    text-transform: initial;
+    padding: 1em 1.5em;
+    transition: all 250ms;
+
+    &:hover{
+      background-color: $red;
+      color: white;
+    }
+  }
 }
 
 .line-up{
@@ -496,7 +517,7 @@ footer{
     border-radius: 5px;
     flex: 3;
     cursor: pointer;
-    transition: all 200ms;
+    transition: margin 200ms;
 
     &.unselected:hover{
       margin-left: 2em;
@@ -536,4 +557,11 @@ footer{
 
 @keyframes float {
   50%{top: -3vh;}
+}
+
+.loading{
+  background-image: url(assets/images/loader.gif);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
 }
