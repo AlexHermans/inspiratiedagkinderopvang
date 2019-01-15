@@ -87,6 +87,18 @@ a:hover{
   color: #999;
 }
 
+a.back{
+  position: relative;
+  left: -1em;
+  top: -1em;
+}
+
+.back:before{
+  content: '<';
+  position: relative;
+  left: -1em;
+}
+
 body{
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden;
@@ -183,7 +195,7 @@ button.cta{
 }
 
 button.cta:hover{
-  @include box-shadow(0px, 30px, 55px, 0px);
+  @include box-shadow(0px, 0px, 55px, 0px);
   transition: all 200ms;
 }
 
@@ -212,6 +224,12 @@ button.minor{
   text-transform: uppercase;
   font-size: 120%;
   cursor: pointer;
+  transition: all 200ms;
+
+  &:hover{
+    background-color: $red;
+    color: white;
+  }
 }
 
 .button_container{
@@ -378,15 +396,47 @@ footer{
   }
 }
 
-.sessie_box {
-  background-color: #FAFAFA;
-  width: 60%;
-  margin-bottom: 1em;
-  padding: 1em;
+.sessie_image{
+  height: 100%;
+  width: 14vh;
+  background-position: center;
+  background-size: cover;
 }
 
-.praktisch {
+.sessie_box_outer{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  cursor: pointer;
+  height: 10vh;
+  width: 60%;
+  transition: all 200ms;
 
+  &:hover{
+    @include box-shadow(0px, 20px, 50px, 0)
+  }
+}
+
+.sessie_box {
+  background-color: #FAFAFA;
+  width: 100%;
+  padding: 1em;
+
+  h3,p{
+    margin: 0.4em 0;
+  }
+
+  p{
+    font-weight: 400;
+    font-size: 85%;
+    color: $dark-gray;
+  }
+
+  h3{
+    margin-top: 0;
+    font-size: 125%;
+    font-weight: 900;
+  }
 }
 
 //special styles
@@ -444,7 +494,7 @@ footer{
   height: auto !important;
   position: relative;
 
-  button.minor{
+  button.minor[name="button_sessie_archive"]{
     position: fixed;
     BOTTOM: 2em;
     right: 2em;
@@ -452,15 +502,27 @@ footer{
     text-transform: initial;
     padding: 1em 1.5em;
     transition: all 250ms;
-
-    &:hover{
-      background-color: $red;
-      color: white;
-    }
   }
 }
 
-.line-up{
+.helper{
+  h3{
+    font-weight: 900;
+    font-size: 120%;
+  }
+
+  p{
+    font-weight: 100;
+    margin: 1ex 0 2em;
+  }
+}
+
+.session_list{
+  padding-top: 4em;
+}
+
+.line-up,
+.session_list{
   width: 45vw;
   margin: 4em 0 2em 8em;
   flex-direction: column;
@@ -508,23 +570,58 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row !important;
   }
 
   .session_field_inner{
     background-color: $light-gray;
     width: 100%;
-    padding: 2em;
+    padding: 1em 2em;
     border-radius: 5px;
     flex: 3;
     cursor: pointer;
     transition: margin 200ms;
+    flex-direction: column;
+    transition: all 200ms;
+
+    .session_header{
+      position: relative;
+      left: -2em;
+      top: -1em;
+      height: 4vh;
+      width: calc(100% + 4em);
+      transition: all 300ms;
+      border-radius: 5px 5px 0 0;
+    }
 
     &.unselected:hover{
       margin-left: 2em;
     }
   }
 
-  .helper{
+  .session_field_inner .session_location,
+  .session_field_inner .session_time{
+    color: $dark-gray
+  }
+
+  .session_field_inner .session_location{
+    display: none;
+  }
+
+  .session_field_inner.selected:hover{
+    padding: 2em;
+
+    .session_header{
+      height: 10vh;
+      top: -2em;
+    }
+
+    .session_location{
+      display: inherit;
+    }
+  }
+
+  .helper_selected{
     background-color: white;
     @include box-shadow(0px, 20px, 50px, 0px);
     z-index: 1;
@@ -552,6 +649,71 @@ footer{
     background-color: $darker-gray;
     color: #999;
     cursor: default;
+  }
+}
+
+.empty{
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.session_header{
+  width:100%;
+  height: 15vh;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.cfas_outer{
+  display: flex;
+
+  .line-up{
+    justify-content: flex-start;
+    width: 30vw;
+  }
+
+  .label{
+    flex: 0;
+    justify-content: center;
+  }
+
+  .session_content{
+    background-color: $light-gray;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+
+    .session_inner{
+      padding: 1em;
+    }
+
+    h3{
+      font-size: 125%;
+      font-weight: 900;
+      margin-top: 1.5;
+      margin-bottom: 0.5em;
+    }
+
+    .session_time,
+    .session_location{
+      color: $dark-gray;
+      margin-bottom: 0.2em;
+      font-size: 85%;
+    }
+
+    .session_broodtext{
+      height: 25vh;
+      overflow: auto;
+      margin-top: 1em;
+
+      p{
+        margin-bottom: 0.5em;
+        line-height: 135%;
+        font-size: 90%;
+      }
+    }
   }
 }
 

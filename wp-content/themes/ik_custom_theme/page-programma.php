@@ -13,6 +13,31 @@
  */
 get_header();?>
 
+<?php
+
+  $ronde_1_session_id = $ronde_2_session_id = $ronde_3_session_id = '';
+
+  // getting relevant cookies
+  foreach ($_COOKIE as $key => $value){
+    switch ($key) {
+      case 'ronde_ID_ronde_1':
+        $ronde_1_session_id = substr($value, (strrpos($value, '_') + 1));
+        break;
+      case 'ronde_ID_ronde_2':
+        $ronde_2_session_id = substr($value, (strrpos($value, '_') + 1));
+        break;
+      case 'ronde_ID_ronde_3':
+        $ronde_3_session_id = substr($value, (strrpos($value, '_') + 1));
+        break;
+    }
+  }
+
+  echo $ronde_1_session_id;
+  echo $ronde_2_session_id;
+  echo $ronde_3_session_id;
+
+?>
+
 <main>
   <section class="line_up_outer" >
     <section class="line-up">
@@ -29,20 +54,34 @@ get_header();?>
       </div>
       <div class="session_field_outer ronde_1" data-ronde="1">
         <div class="label">
-          <div class="label_indicator"></div>
+          <div class="label_indicator <?php if(!empty($ronde_1_session_id)): ?>correct<?php endif;?> "></div>
           <p>Ronde 1</p>
         </div>
-        <div class="session_field_inner unselected helper">
-          <div class="plus">+</div><p>KIES EEN SESSIE</p>
+        <div class="session_field_inner <?php if(empty($ronde_1_session_id)): ?>helper_selected un<?php endif;?>selected ">
+          <?php if(!empty($ronde_1_session_id)): ?>
+            <?php
+            set_query_var('session_id', $ronde_1_session_id);
+            get_template_part('template-parts/session', 'button');
+            ?>
+          <?php else: ?>
+            <div class="plus">+</div><p>KIES EEN SESSIE</p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="session_field_outer ronde_2" data-ronde="2">
         <div class="label">
-          <div class="label_indicator"></div>
+          <div class="label_indicator <?php if(!empty($ronde_2_session_id)): ?>correct<?php endif;?> "></div>
           <p>Ronde 2</p>
         </div>
-        <div class="session_field_inner unselected">
-          <div class="plus">+</div><p>KIES EEN SESSIE</p>
+        <div class="session_field_inner <?php if(empty($ronde_2_session_id)): ?>un<?php endif;?>selected">
+          <?php if(!empty($ronde_2_session_id)): ?>
+            <?php
+            set_query_var('session_id', $ronde_2_session_id);
+            get_template_part('template-parts/session', 'button');
+            ?>
+          <?php else: ?>
+            <div class="plus">+</div><p>KIES EEN SESSIE</p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="session_field_outer" data-ronde="middag">
@@ -57,11 +96,18 @@ get_header();?>
       </div>
       <div class="session_field_outer ronde_3" data-ronde="3">
         <div class="label">
-          <div class="label_indicator"></div>
+          <div class="label_indicator <?php if(!empty($ronde_3_session_id)): ?>correct<?php endif;?> "></div>
           <p>Ronde 3</p>
         </div>
-        <div class="session_field_inner unselected">
-          <div class="plus">+</div><p>KIES EEN SESSIE</p>
+        <div class="session_field_inner <?php if(empty($ronde_3_session_id)): ?>un<?php endif;?>selected">
+          <?php if(!empty($ronde_3_session_id)): ?>
+            <?php
+            set_query_var('session_id', $ronde_3_session_id);
+            get_template_part('template-parts/session', 'button');
+            ?>
+          <?php else: ?>
+            <div class="plus">+</div><p>KIES EEN SESSIE</p>
+          <?php endif; ?>
         </div>
       </div>
       <div class="session_field_outer" data-ronde="plenair">

@@ -20,16 +20,18 @@
           $('.line_up_outer').animate({
             top: '-4vh',
             opacity: '0'
-          }, function(){
-            $('.line_up_outer').html('')
+          },'fast', function(){
+            $('.line_up_outer').animate({
+              top: '0',
+              opacity: 1
+            },'fast').html(response)
           })
         },
         error: function(response){
           that.toggleClass('loading').addClass('error')
           that.text(response)
         }
-      })
-
-    })
-  })
+      });
+    });
+  });
 }(jQuery))
