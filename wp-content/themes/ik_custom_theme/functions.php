@@ -31,6 +31,7 @@ add_theme_support('post-thumbnails');
 // Registratie van scripts
 function ik_enqueue_scripts(){
 
+  wp_enqueue_script('cookies', "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js");
   wp_enqueue_script('ajax_cfas', theme_dir.'/assets/js/ajax/choose-from-all-sessions.ajax.js', array('jquery'));
   wp_localize_script('ajax_cfas', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 }

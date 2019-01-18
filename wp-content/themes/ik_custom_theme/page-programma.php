@@ -15,26 +15,27 @@ get_header();?>
 
 <?php
 
-  $ronde_1_session_id = $ronde_2_session_id = $ronde_3_session_id = '';
+  $programma_vars = $ronde_1_session_id = $ronde_2_session_id = $ronde_3_session_id = '';
 
   // getting relevant cookies
   foreach ($_COOKIE as $key => $value){
     switch ($key) {
-      case 'ronde_ID_ronde_1':
+      case 'ronde_ID_ronde-1':
         $ronde_1_session_id = substr($value, (strrpos($value, '_') + 1));
         break;
-      case 'ronde_ID_ronde_2':
+      case 'ronde_ID_ronde-2':
         $ronde_2_session_id = substr($value, (strrpos($value, '_') + 1));
         break;
-      case 'ronde_ID_ronde_3':
+      case 'ronde_ID_ronde-3':
         $ronde_3_session_id = substr($value, (strrpos($value, '_') + 1));
+        break;
+      case 'programma_vars':
+        $programma_vars = json_decode(str_replace("\\", '', $value));
         break;
     }
   }
 
-  echo $ronde_1_session_id;
-  echo $ronde_2_session_id;
-  echo $ronde_3_session_id;
+  echo $ronde_1_session_id
 
 ?>
 
@@ -55,7 +56,7 @@ get_header();?>
       <div class="session_field_outer ronde_1" data-ronde="1">
         <div class="label">
           <div class="label_indicator <?php if(!empty($ronde_1_session_id)): ?>correct<?php endif;?> "></div>
-          <p>Ronde 1</p>
+          <p>Ronde 1<?php if($programma_vars->span){echo " + 2";}; ?></p>
         </div>
         <div class="session_field_inner <?php if(empty($ronde_1_session_id)): ?>helper_selected un<?php endif;?>selected ">
           <?php if(!empty($ronde_1_session_id)): ?>
@@ -68,6 +69,7 @@ get_header();?>
           <?php endif; ?>
         </div>
       </div>
+      <?php if(!$programma_vars->span):?>
       <div class="session_field_outer ronde_2" data-ronde="2">
         <div class="label">
           <div class="label_indicator <?php if(!empty($ronde_2_session_id)): ?>correct<?php endif;?> "></div>
@@ -84,14 +86,25 @@ get_header();?>
           <?php endif; ?>
         </div>
       </div>
+      <?php endif;?>
       <div class="session_field_outer" data-ronde="middag">
         <div class="label">
-          <div class="label_indicator pending"></div>
+          <div class="label_indicator <?php if(!empty($ronde_1_session_id) && !empty($ronde_2_session_id)):?>correct<?php else: ?>pending<?php endif; ?>"></div>
           <p>Middag</p>
         </div>
         <div class="session_field_inner disabled">
           <h3 class="session_title">Middagpauze met praktijkenbeurs</h3>
-          <p class="time">Kies een sessie in Ronde 1 om een tijd te zien.</p>
+          <p class="time">
+              <?php if (!empty($ronde_1_session_id) || !empty($ronde_2_session_id)):?>
+                <?php if ($programma_vars->extends):?>
+                  13u00 - 13u45
+                <?php else: ?>
+                  12u30 - 13u15
+                <?php endif;?>
+              <?php else: ?>
+                Kies een sessie in Ronde 1 om een tijd te zien.
+              <?php endif;?>
+          </p>
         </div>
       </div>
       <div class="session_field_outer ronde_3" data-ronde="3">
