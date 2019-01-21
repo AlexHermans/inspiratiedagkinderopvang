@@ -99,10 +99,6 @@ a.back{
   left: -1em;
 }
 
-.hidden{
-  display: none;
-}
-
 body{
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden;
@@ -182,7 +178,7 @@ h1, h2{
   line-height: 1.2
 }
 
-button.cta{
+.cta{
   margin-top: 1.5em;
   color: white;
   background-color: $yellow;
@@ -413,7 +409,7 @@ footer{
   margin-bottom: 1em;
   cursor: pointer;
   height: 10vh;
-  width: 60%;
+  width: 80%;
   transition: all 200ms;
 
   &:hover{
@@ -425,6 +421,15 @@ footer{
   background-color: #FAFAFA;
   width: 100%;
   padding: 1em;
+
+  &.current{
+    background-color: $red;
+    color: white;
+
+    p{
+      color: white;
+    }
+  }
 
   h3,p{
     margin: 0.4em 0;
@@ -487,14 +492,10 @@ footer{
   }
 }
 
-.error{
-  color: red;
-  background-color: yellow;
-}
 
 // Voor programma
 .line_up_outer{
-  flex-direction: column;
+  flex-direction: row;
   height: auto !important;
   position: relative;
 
@@ -510,6 +511,11 @@ footer{
 }
 
 .helper{
+  width: 45vw;
+  flex-direction: column;
+  height: auto !important;
+  line-height: 135%;
+
   h3{
     font-weight: 900;
     font-size: 120%;
@@ -519,6 +525,55 @@ footer{
     font-weight: 100;
     margin: 1ex 0 2em;
   }
+
+  .cta{
+    background-color: $green;
+    width: 50%;
+  }
+}
+
+#current_step_0{
+  margin-top: 240px;
+  margin-left: 8em;
+
+  &:after{
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background-image: url(assets/images/arrows/arrow_1.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -80px;
+    left: -110px;
+  }
+}
+
+#current_step_2{
+  width: auto;
+  text-align:center;
+
+  &:after{
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background-image: url(assets/images/arrows/arrow_2.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -110px;
+    left: 370px;
+  }
+
+}
+
+#current_step_3,
+#current_step_4{
+  margin: 12em 0 0 4em;
 }
 
 .session_list{
@@ -688,6 +743,7 @@ footer{
     height: 65vh;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
 
     .session_inner{
       padding: 1em;
@@ -721,8 +777,53 @@ footer{
   }
 }
 
-@keyframes float {
-  50%{top: -3vh;}
+.registration_information{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  justify-content: center;
+  align-items: center;
+
+
+  .overlay{
+    background-color: rgba(0,0,0,0.7);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .reg_info{
+    background-color: white;
+    padding: 2em;
+    z-index: 3;
+    position: relative;
+    top:3vh;
+    opacity: 0;
+
+    legend{
+      margin-bottom: 40px;
+      font-size: 120%;
+      font-weight: 900;
+    }
+
+    input{
+      display:block;
+      background-color: $light-gray;
+      border: none;
+      padding: 1em;
+      font-family: 'Segoe UI';
+      font-weight: 400;
+      width: 94%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .loading{
@@ -730,4 +831,18 @@ footer{
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: center;
+}
+
+.hidden{
+  display: none;
+}
+
+
+.error{
+  color: white;
+  background-color: $red;
+}
+
+@keyframes float {
+  50%{top: -3vh;}
 }

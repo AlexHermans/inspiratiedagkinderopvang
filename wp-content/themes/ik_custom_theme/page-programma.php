@@ -11,9 +11,7 @@
  * @since 1.0
  * @version 1.0
  */
-get_header();?>
-
-<?php
+get_header();
 
   $programma_vars = $ronde_1_session_id = $ronde_2_session_id = $ronde_3_session_id = '';
 
@@ -35,11 +33,35 @@ get_header();?>
     }
   }
 
-  echo $ronde_1_session_id
+  $helper_step_progress = array(
+    array (
+      'title' => 'Kies een sessie voor dit moment',
+      'subtitle' => 'Krijg voorstellen van sessies die beschikbaar zijn op dit moment.',
+      'completed' => false,
+    ),
+    array (
+      'title' => 'Maak een keuze uit deze sessies',
+      'subtitle' => 'Klik op één van de sessies om deze te kiezen voor dit tijdsvak.',
+      'completed' => false,
+    ),
+    array (
+      'title' => 'Klik hier om deze sessie te reserveren',
+      'subtitle' => '',
+      'completed' => false,
+    ),
+    array (
+      'title' => 'Vervolledig jouw programma',
+      'subtitle' => 'Je kan je automatisch inschrijven op alles eens je helemaal klaar bent.',
+      'completed' => false,
+    ),
+    array (
+      'title' => 'Klaar!',
+      'subtitle' => 'Je hebt je programma vervolledigd. <br>Klik op de knop hieronder om je meteen in te schrijven.',
+      'completed' => false,
+    ),
+  );
 
-?>
-
-<main>
+?><main>
   <section class="line_up_outer" >
     <section class="line-up">
       <h1>Maak jouw programma</h1>
@@ -143,10 +165,42 @@ get_header();?>
           </div>
         </div>
     </section>
+    <?php
+      if(!isset($_COOKIE['helper_step_id'])){
+        $current_step_id = 0;
+      } else {
+         $current_step_id = $_COOKIE['helper_step_id'];
+      }
+      ?>
+    <section class="helper" id="current_step_<?php echo $current_step_id; ?>">
+      <?php if(isset($current_step_id)):?>
+        <h3><?php echo $helper_step_progress[$current_step_id]['title']; ?></h3>
+        <p><?php echo $helper_step_progress[$current_step_id]['subtitle']; ?></p>
+      <?php else: ?>
+        <h3>Kies een sessie voor dit moment</h3>
+        <p>Krijg voorstellen van sessies die beschikbaar zijn op dit moment.</p>
+      <?php endif; ?>
+      <?php if ($current_step_id == 4):?>
+        <button type="button" name="inschrijving bevestigen" class="cta">Inschrijving bevestigen</button>
+      <?php endif;?>
+    </section>
     <div class="button_container">
       <a href="<?php echo get_post_type_archive_link('sessie'); ?>"><button type="button" name="button_sessie_archive" class="minor">Kies uit alle sessies</button></a>
     </div>
   </section>
+  <div class="registration_information hidden">
+    <div class="overlay hidden"></div>
+    <form class="reg_info" action="#" method="post">
+      <legend>We hebben nu nog enkel wat extra informatie nodig.</legend>
+      <label for="voonaam">Voornaam</label>
+      <input type="text" name="voornaam" id="voornaam" value="">
+      <label for="achternaam">Achternaam</label>
+      <input type="text" name="achternaam" id="achternaam" value="">
+      <label for="e-mail">E-mailadres</label>
+      <input type="e-mail" name="e-mail" id="e-mail" value="">
+      <button type="button" name="enroll" id="enroll_all" class="cta">Inschrijving voltooien</button>
+    </form>
+  </div>
 </main>
 </body>
 </html>

@@ -65,9 +65,6 @@ a.back {
   position: relative;
   left: -1em; }
 
-.hidden {
-  display: none; }
-
 body {
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden; }
@@ -133,7 +130,7 @@ h1, h2 {
   max-width: 20em;
   line-height: 1.2; }
 
-button.cta {
+.cta {
   margin-top: 1.5em;
   color: white;
   background-color: #E9C73B;
@@ -313,7 +310,7 @@ footer {
   margin-bottom: 1em;
   cursor: pointer;
   height: 10vh;
-  width: 60%;
+  width: 80%;
   transition: all 200ms; }
   .sessie_box_outer:hover {
     -webkit-box-shadow: 0px 20px 50px 0 rgba(0, 0, 0, 0.1);
@@ -324,6 +321,11 @@ footer {
   background-color: #FAFAFA;
   width: 100%;
   padding: 1em; }
+  .sessie_box.current {
+    background-color: #ff561d;
+    color: white; }
+    .sessie_box.current p {
+      color: white; }
   .sessie_box h3, .sessie_box p {
     margin: 0.4em 0; }
   .sessie_box p {
@@ -367,12 +369,8 @@ footer {
     margin-bottom: 5vh;
     left: 2vw; }
 
-.error {
-  color: red;
-  background-color: yellow; }
-
 .line_up_outer {
-  flex-direction: column;
+  flex-direction: row;
   height: auto !important;
   position: relative; }
   .line_up_outer button.minor[name="button_sessie_archive"] {
@@ -384,12 +382,56 @@ footer {
     padding: 1em 1.5em;
     transition: all 250ms; }
 
-.helper h3 {
-  font-weight: 900;
-  font-size: 120%; }
-.helper p {
-  font-weight: 100;
-  margin: 1ex 0 2em; }
+.helper {
+  width: 45vw;
+  flex-direction: column;
+  height: auto !important;
+  line-height: 135%; }
+  .helper h3 {
+    font-weight: 900;
+    font-size: 120%; }
+  .helper p {
+    font-weight: 100;
+    margin: 1ex 0 2em; }
+  .helper .cta {
+    background-color: #3FDA79;
+    width: 50%; }
+
+#current_step_0 {
+  margin-top: 240px;
+  margin-left: 8em; }
+  #current_step_0:after {
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background-image: url(assets/images/arrows/arrow_1.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -80px;
+    left: -110px; }
+
+#current_step_2 {
+  width: auto;
+  text-align: center; }
+  #current_step_2:after {
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    background-image: url(assets/images/arrows/arrow_2.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -110px;
+    left: 370px; }
+
+#current_step_3,
+#current_step_4 {
+  margin: 12em 0 0 4em; }
 
 .session_list {
   padding-top: 4em; }
@@ -529,7 +571,8 @@ footer {
     background-color: #f8f8f8;
     height: 65vh;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-bottom: 1em; }
     .cfas_outer .session_content .session_inner {
       padding: 1em; }
     .cfas_outer .session_content h3 {
@@ -551,13 +594,60 @@ footer {
         line-height: 135%;
         font-size: 90%; }
 
-@keyframes float {
-  50% {
-    top: -3vh; } }
+.registration_information {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  justify-content: center;
+  align-items: center; }
+  .registration_information .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+  .registration_information .reg_info {
+    background-color: white;
+    padding: 2em;
+    z-index: 3;
+    position: relative;
+    top: 3vh;
+    opacity: 0; }
+    .registration_information .reg_info legend {
+      margin-bottom: 40px;
+      font-size: 120%;
+      font-weight: 900; }
+    .registration_information .reg_info input {
+      display: block;
+      background-color: #f8f8f8;
+      border: none;
+      padding: 1em;
+      font-family: 'Segoe UI';
+      font-weight: 400;
+      width: 94%;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+
 .loading {
   background-image: url(assets/images/loader.gif);
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: center; }
+
+.hidden {
+  display: none; }
+
+.error {
+  color: white;
+  background-color: #ff561d; }
+
+@keyframes float {
+  50% {
+    top: -3vh; } }
 
 /*# sourceMappingURL=style.css.map */

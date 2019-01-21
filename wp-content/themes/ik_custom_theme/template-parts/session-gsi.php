@@ -38,17 +38,13 @@
    <script type="text/javascript">
    jQuery('button[name="register"]').click(function(){
      if (navigator.cookieEnabled){
-       var current_round = jQuery('.label > p').text().toLowerCase().replace(' ', '-')
 
        var programma_vars = {
          span:  (jQuery('.session_info .ronde').length > 1 || Cookies.get('ronde_ID_ronde-1') == Cookies.get('ronde_ID_ronde-2') ? true : false),
          extends: (jQuery('.session_time').text() == "11u15 - 13u00" ? true : false),
        }
 
-       console.log(programma_vars.span)
-
        jQuery('.session_info .ronde').each(function(){
-         console.log(jQuery(this).data('id'));
          Cookies.set('ronde_ID_'+jQuery(this).data('id'), 'session_ID_'+jQuery('.session_header').data('session-id'), {expires: 365 , path: ''});
 
          if (Cookies.get('ronde_ID_ronde-1') != Cookies.get('ronde_ID_ronde-2')){
@@ -56,9 +52,6 @@
 
            if (Cookies.get('ronde_ID_ronde-1') == 'session_ID_'+jQuery('.session_header').data('session-id')){
              Cookies.remove('ronde_ID_ronde-2', {path: ''})
-           } else {
-             // eerst checken of dit problemen geeft of niet
-             // Cookies.remove('ronde_ID_ronde-1', {path: ''})
            }
          } else {
            programma_vars.span = true;
@@ -66,22 +59,14 @@
          Cookies.set('programma_vars', programma_vars, {expires: 365, path: ''})
        });
 
-
-
-       // Cookie.set('ronde_ID_'+, '')
-
-      //  document.cookie = 'programma_vars=' + JSON.stringify(programma_vars) + ';' + expires + ';path=/'
-      //
-      //  if(programma_vars.span){
-      //    jQuery('.session_info .ronde').each(function(){
-      //      console.log(jQuery(this).data('id'))
-      //      if (document.cookie = 'ronde_ID_'+jQuery(this).data('id')+'=session_ID_<?php echo get_the_ID(); ?>;' + expires + ';path=/'){
-      //          window.location = '<?php echo get_site_url(null, '/programma');?>';
-      //      }
-      //    })
-      //  } else if(document.cookie = 'ronde_ID_'+current_round+'=session_ID_<?php echo get_the_ID(); ?>;' + expires + ';path=/'){
-      //     window.location = '<?php echo get_site_url(null, '/programma');?>';
-      // }
+       if ( typeof Cookies.get('ronde_ID_ronde-1') !== 'undefined' &&
+            typeof Cookies.get('ronde_ID_ronde-2') !== 'undefined' &&
+            typeof Cookies.get('ronde_ID_ronde-3') !== 'undefined'){
+              Cookies.set('helper_step_id', 4, {expires: 365, path: ''})
+            } else {
+              Cookies.set('helper_step_id', 3, {expires: 365, path: ''})
+            }
+       window.location = '<?php echo get_site_url(null, '/programma');?>'
      } else {
        alert('Om je in te schrijven moet je cookies toe staan. Gelieve dit aan te passen.')
      }

@@ -32,8 +32,12 @@ add_theme_support('post-thumbnails');
 function ik_enqueue_scripts(){
 
   wp_enqueue_script('cookies', "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js");
+
   wp_enqueue_script('ajax_cfas', theme_dir.'/assets/js/ajax/choose-from-all-sessions.ajax.js', array('jquery'));
   wp_localize_script('ajax_cfas', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+
+  wp_enqueue_script('ajax_enroll', theme_dir.'/assets/js/ajax/enroll.ajax.js', array('jquery'));
+  wp_localize_script('ajax_enroll', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts', 'ik_enqueue_scripts');
@@ -80,4 +84,23 @@ function ik_ajax_gsi(){
 
 add_action('wp_ajax_ik_ajax_gsi', 'ik_ajax_gsi');
 add_action('wp_ajax_nopriv_ik_ajax_gsi', 'ik_ajax_gsi');
+
+function ik_ajax_enroll(){
+  $to = $_REQUEST['to'];
+  $subject = $_REQUEST['subject'];
+  $body = $_REQUEST['body'];
+  // $headers = array('Content-Type: text/html; charset=UTF-8', 'Bcc:helpdesk@vvsg.be');
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+
+  if (wp_mail($to, $subject, $body, $headers)){
+    echo '200';
+  } else {
+    echo 'Probleem: mail niet verstuurd';
+  }
+
+  die();
+}
+
+add_action('wp_ajax_ik_ajax_enroll', 'ik_ajax_enroll');
+add_action('wp_ajax_nopriv_ik_ajax_enroll', 'ik_ajax_enroll');
 ?>

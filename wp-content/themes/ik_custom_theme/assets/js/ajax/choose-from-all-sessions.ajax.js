@@ -26,6 +26,9 @@
               opacity: 1
             },'fast').html(response)
           })
+          if(Cookies.get('helper_step_id') == 0){
+            Cookies.set('helper_step_id', 1, {expires: 365, path: ''})
+          }
         },
         error: function(response){
           that.toggleClass('loading').addClass('error')
