@@ -72,7 +72,7 @@ get_header();
         </div>
         <div class="session_field_inner disabled">
           <h3 class="session_title">Titel</h3>
-          <p class="time">08u30 - 09u45</p>
+          <p class="session_time">08u30 - 09u45</p>
         </div>
       </div>
       <div class="session_field_outer ronde_1" data-ronde="1">
@@ -109,14 +109,14 @@ get_header();
         </div>
       </div>
       <?php endif;?>
-      <div class="session_field_outer" data-ronde="middag">
+      <div class="session_field_outer ronde_middag" data-ronde="middag">
         <div class="label">
           <div class="label_indicator <?php if(!empty($ronde_1_session_id) && !empty($ronde_2_session_id)):?>correct<?php else: ?>pending<?php endif; ?>"></div>
           <p>Middag</p>
         </div>
         <div class="session_field_inner disabled">
           <h3 class="session_title">Middagpauze met praktijkenbeurs</h3>
-          <p class="time">
+          <p class="session_time">
               <?php if (!empty($ronde_1_session_id) || !empty($ronde_2_session_id)):?>
                 <?php if ($programma_vars->extends):?>
                   13u00 - 13u45
@@ -145,23 +145,23 @@ get_header();
           <?php endif; ?>
         </div>
       </div>
-      <div class="session_field_outer" data-ronde="plenair">
+      <div class="session_field_outer ronde_plenair" data-ronde="plenair">
         <div class="label">
           <div class="label_indicator correct"></div>
           <p>Plenair</p>
         </div>
         <div class="session_field_inner disabled">
           <h3 class="session_title">Titel</h3>
-          <p class="time">08u30 - 09u45</p>
+          <p class="session_time">08u30 - 09u45</p>
         </div>
-      </div>  <div class="session_field_outer" data-ronde="receptie">
+      </div>  <div class="session_field_outer ronde_receptie" data-ronde="receptie">
           <div class="label">
             <div class="label_indicator correct"></div>
             <p>Receptie</p>
           </div>
           <div class="session_field_inner disabled">
             <h3 class="session_title">Titel</h3>
-            <p class="time">08u30 - 09u45</p>
+            <p class="session_time">08u30 - 09u45</p>
           </div>
         </div>
     </section>

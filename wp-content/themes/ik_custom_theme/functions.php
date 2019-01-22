@@ -38,6 +38,9 @@ function ik_enqueue_scripts(){
 
   wp_enqueue_script('ajax_enroll', theme_dir.'/assets/js/ajax/enroll.ajax.js', array('jquery'));
   wp_localize_script('ajax_enroll', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+
+  wp_enqueue_script('ajax_filter', theme_dir.'/assets/js/ajax/filter.ajax.js', array('jquery'));
+  wp_localize_script('ajax_filter', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts', 'ik_enqueue_scripts');

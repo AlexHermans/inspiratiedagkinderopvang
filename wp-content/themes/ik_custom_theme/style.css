@@ -633,6 +633,24 @@ footer {
       margin-top: 10px;
       margin-bottom: 20px; }
 
+.filters {
+  margin: 8em 0 0 4em; }
+  .filters .filter_form legend {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 130%;
+    margin-bottom: 0.3em; }
+  .filters .filter_form fieldset {
+    margin-top: 1.5em; }
+  .filters .filter_form .checkbox_outer {
+    display: flex;
+    flex-direction: row;
+    margin: 0.2em 0; }
+  .filters .filter_form .count {
+    margin-left: 0.5em;
+    display: inline;
+    color: #A29F9F; }
+
 .loading {
   background-image: url(assets/images/loader.gif);
   background-repeat: no-repeat;

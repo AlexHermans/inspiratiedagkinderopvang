@@ -826,6 +826,36 @@ footer{
   }
 }
 
+.filters{
+  margin: 8em 0 0 4em;
+
+  .filter_form{
+
+    legend{
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 130%;
+      margin-bottom: 0.3em;
+    }
+
+    fieldset{
+      margin-top: 1.5em;
+    }
+
+    .checkbox_outer{
+      display: flex;
+      flex-direction: row;
+      margin: 0.2em 0;
+    }
+
+    .count{
+      margin-left: 0.5em;
+      display: inline;
+      color: $dark-gray;
+    }
+  }
+}
+
 .loading{
   background-image: url(assets/images/loader.gif);
   background-repeat: no-repeat;

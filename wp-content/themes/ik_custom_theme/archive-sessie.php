@@ -8,19 +8,32 @@
  */
 
  get_header();
+
+ $taxonomies = get_post_taxonomies();
  ?>
 
- <main>
+ <main style="display:flex">
+   <section class="filters">
+     <form class="filter_form" action="#" method="post">
+       <?php foreach ($taxonomies as $k => $v):?>
+         <fieldset>
+           <legend><?php echo $v; ?></legend>
+           <?php
+             $terms = get_terms(array('taxonomy' => $v));
+             foreach ($terms as $term):?>
+             <div class="checkbox_outer">
+               <input data-taxonomy-name="<?php echo $v; ?>" type="checkbox" id="<?php echo $term->slug;?>" name="<?php echo $term->name; ?>" value="<?php echo $term->slug; ?>">             <label for="<?php echo $term->slug ?>"><?php echo $term->name; ?></label>
+               <p class="count">(<?php echo $term->count; ?>)</p>
+             </div>
+           <?php endforeach;?>
+         </fieldset>
+       <?php endforeach; ?>
+     </form>
+   </section>
    <section class="infinite">
      <h1>Alle sessies</h1>
-     <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
-       <div class="sessie_box_outer">
-         <div class="sessie_image" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
-         <div class="sessie_box">
-           <h3><?php echo the_title(); ?></h3>
-           <a href="<?php echo get_permalink(); ?>">Ga naar sessie</a>
-         </div>
-      </div>
-     <?php endwhile; endif;?>
+     <div class="all_sessions">
+
+     </div>
    </section>
  </main>
