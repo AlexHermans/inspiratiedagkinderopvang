@@ -434,7 +434,8 @@ footer {
   margin: 12em 0 0 4em; }
 
 .session_list {
-  padding-top: 4em; }
+  padding-top: 4em;
+  margin-left: 45vw !important; }
 
 .line-up,
 .session_list {
@@ -563,7 +564,8 @@ footer {
   display: flex; }
   .cfas_outer .line-up {
     justify-content: flex-start;
-    width: 30vw; }
+    width: 30vw;
+    position: fixed; }
   .cfas_outer .label {
     flex: 0;
     justify-content: center; }
@@ -633,23 +635,47 @@ footer {
       margin-top: 10px;
       margin-bottom: 20px; }
 
+.all_sessions {
+  min-height: 10vh; }
+
+.sub_header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  width: 53vw;
+  justify-content: space-between; }
+  .sub_header h1 {
+    width: auto;
+    margin-top: 0; }
+  .sub_header input#search {
+    background-color: #FAFAFA;
+    border: none;
+    padding: 1em;
+    margin-bottom: 1em; }
+
 .filters {
-  margin: 8em 0 0 4em; }
-  .filters .filter_form legend {
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 130%;
-    margin-bottom: 0.3em; }
-  .filters .filter_form fieldset {
-    margin-top: 1.5em; }
-  .filters .filter_form .checkbox_outer {
-    display: flex;
-    flex-direction: row;
-    margin: 0.2em 0; }
-  .filters .filter_form .count {
-    margin-left: 0.5em;
-    display: inline;
-    color: #A29F9F; }
+  margin: 6em 0 0 4em;
+  width: 35vw; }
+  .filters .filter_form {
+    padding: 2em;
+    background-color: #f8f8f8; }
+    .filters .filter_form legend {
+      text-transform: capitalize;
+      font-weight: 900;
+      font-size: 115%;
+      margin-bottom: 0.3em; }
+    .filters .filter_form fieldset {
+      margin-top: 1.5em; }
+    .filters .filter_form .checkbox_outer {
+      display: flex;
+      flex-direction: row;
+      margin: 0.2em 0; }
+      .filters .filter_form .checkbox_outer.selected {
+        font-weight: 900; }
+    .filters .filter_form .count {
+      margin-left: 0.5em;
+      display: inline;
+      color: #A29F9F; }
 
 .loading {
   background-image: url(assets/images/loader.gif);

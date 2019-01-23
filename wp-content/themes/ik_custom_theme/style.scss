@@ -578,6 +578,7 @@ footer{
 
 .session_list{
   padding-top: 4em;
+  margin-left: 45vw !important;
 }
 
 .line-up,
@@ -731,6 +732,7 @@ footer{
   .line-up{
     justify-content: flex-start;
     width: 30vw;
+    position: fixed;
   }
 
   .label{
@@ -826,15 +828,42 @@ footer{
   }
 }
 
+.all_sessions{
+  min-height: 10vh;
+}
+
+.sub_header{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  width: 53vw;
+  justify-content: space-between;
+
+  h1{
+    width: auto;
+    margin-top: 0;
+  }
+
+  input#search{
+    background-color: #FAFAFA;
+    border: none;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+}
+
 .filters{
-  margin: 8em 0 0 4em;
+  margin: 6em 0 0 4em;
+  width: 35vw;
 
   .filter_form{
+    padding: 2em;
+    background-color: $light-gray;
 
     legend{
       text-transform: capitalize;
-      font-weight: 700;
-      font-size: 130%;
+      font-weight: 900;
+      font-size: 115%;
       margin-bottom: 0.3em;
     }
 
@@ -846,6 +875,10 @@ footer{
       display: flex;
       flex-direction: row;
       margin: 0.2em 0;
+
+      &.selected{
+        font-weight:900;
+      }
     }
 
     .count{
