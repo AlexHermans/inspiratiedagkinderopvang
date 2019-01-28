@@ -71,8 +71,18 @@ get_header();
           <p>Onthaal</p>
         </div>
         <div class="session_field_inner disabled">
-          <h3 class="session_title">Titel</h3>
-          <p class="session_time">08u30 - 09u45</p>
+          <h3 class="session_title">Onthaal</h3>
+          <p class="session_time">09u00 - 09u30</p>
+        </div>
+      </div>
+      <div class="session_field_outer ronde_start" data-ronde="start">
+        <div class="label">
+          <div class="label_indicator correct"></div>
+          <p>Gezamelijke start</p>
+        </div>
+        <div class="session_field_inner disabled">
+          <h3 class="session_title">Gezamelijke start</h3>
+          <p class="session_time">09u30 - 09u45</p>
         </div>
       </div>
       <div class="session_field_outer ronde_1" data-ronde="1">
@@ -119,9 +129,9 @@ get_header();
           <p class="session_time">
               <?php if (!empty($ronde_1_session_id) || !empty($ronde_2_session_id)):?>
                 <?php if ($programma_vars->extends):?>
-                  13u00 - 13u45
+                  12u45 - 13u30
                 <?php else: ?>
-                  12u30 - 13u15
+                  12u30 - 13u30
                 <?php endif;?>
               <?php else: ?>
                 Kies een sessie in Ronde 1 om een tijd te zien.
@@ -151,8 +161,8 @@ get_header();
           <p>Plenair</p>
         </div>
         <div class="session_field_inner disabled">
-          <h3 class="session_title">Titel</h3>
-          <p class="session_time">08u30 - 09u45</p>
+          <h3 class="session_title">Inhoudelijke afsluiter met Michel Vandenbroek<br>Uitreiking Gouden Kinderschoen, door Mieck Vos, directeur VVSG</h3>
+          <p class="session_time">15u15 - 16u15</p>
         </div>
       </div>  <div class="session_field_outer ronde_receptie" data-ronde="receptie">
           <div class="label">
@@ -160,8 +170,8 @@ get_header();
             <p>Receptie</p>
           </div>
           <div class="session_field_inner disabled">
-            <h3 class="session_title">Titel</h3>
-            <p class="session_time">08u30 - 09u45</p>
+            <h3 class="session_title">Receptie</h3>
+            <p class="session_time">16u15 - ...</p>
           </div>
         </div>
     </section>

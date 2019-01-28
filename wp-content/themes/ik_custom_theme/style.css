@@ -244,9 +244,18 @@ button.minor {
 
 footer {
   padding: 4vh;
-  height: 8vh;
   width: 100%;
-  background-color: #ff561d; }
+  background-color: #ff561d;
+  display: flex;
+  flex-direction: row; }
+  footer p {
+    color: white; }
+  footer img {
+    position: relative;
+    height: 50%;
+    width: 3%;
+    top: -10px;
+    margin-left: 10px; }
 
 .infinite {
   display: flex;
@@ -281,7 +290,8 @@ footer {
     text-decoration: underline; }
 
 .sessie {
-  margin: 4em 0 0 8em; }
+  margin: 4em 0 0 8em;
+  width: 70vw; }
   .sessie .sessie_info {
     flex-direction: column; }
   .sessie .sessie_thumbnail {
@@ -297,6 +307,16 @@ footer {
     line-height: 135%;
     max-width: 61%;
     margin: 0.5em 0; }
+  .sessie h4 {
+    font-weight: 900; }
+  .sessie .content {
+    margin: 1em 0;
+    flex-direction: column; }
+  .sessie .sessie_audience {
+    margin: 2em 0; }
+  .sessie .original {
+    color: #ff561d;
+    border-bottom: 1px solid #ff561d; }
 
 .sessie_image {
   height: 100%;
@@ -337,6 +357,9 @@ footer {
     font-size: 125%;
     font-weight: 900; }
 
+strong {
+  font-weight: 900; }
+
 .index_error {
   align-self: center;
   text-align: center;
@@ -354,8 +377,6 @@ footer {
   .index_error h1 {
     font-weight: 100;
     margin-bottom: 1em; }
-  .index_error strong {
-    font-weight: 900; }
   .index_error .bee_404 {
     background-image: url("assets/images/bij.png");
     width: 20vh;

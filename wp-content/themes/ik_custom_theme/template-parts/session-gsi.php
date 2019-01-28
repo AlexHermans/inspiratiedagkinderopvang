@@ -41,7 +41,7 @@
 
        var programma_vars = {
          span:  (jQuery('.session_info .ronde').length > 1 || Cookies.get('ronde_ID_ronde-1') == Cookies.get('ronde_ID_ronde-2') ? true : false),
-         extends: (jQuery('.session_time').text() == "11u15 - 13u00" ? true : false),
+         extends: (jQuery('.session_time').text() == "11u15 - 12u45" ? true : false),
        }
 
        jQuery('.session_info .ronde').each(function(){

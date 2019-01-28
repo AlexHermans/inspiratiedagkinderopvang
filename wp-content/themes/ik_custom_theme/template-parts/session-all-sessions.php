@@ -34,6 +34,7 @@
    </a>
 
   <?php endwhile; ?>
+  <?php // wp_reset_query(); ?>
   <?php else: ?>
    Geen sessies gevonden die overeenkomen met de filters. Verwijder filters.
   <?php endif;?>

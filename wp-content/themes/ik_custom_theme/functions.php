@@ -78,7 +78,8 @@ add_action('wp_enqueue_scripts', 'ik_enqueue_scripts');
 function ik_ajax_cfas(){
   $ronde_id = $_REQUEST['ronde_id'];
 
-  $args = array(
+  $args =
+  array(
     'tax_query' => array(
       array(
         'taxonomy' => 'rondes',
@@ -121,7 +122,7 @@ function ik_ajax_enroll(){
   $to = $_REQUEST['to'];
   $subject = $_REQUEST['subject'];
   $body = $_REQUEST['body'];
-  // $headers = array('Content-Type: text/html; charset=UTF-8', 'Bcc:helpdesk@vvsg.be');
+  $headers = array('Content-Type: text/html; charset=UTF-8', 'Bcc:hanne.vannuffel@vvsg.be', 'Bcc:congres@vvsg.be');
   $headers = array('Content-Type: text/html; charset=UTF-8');
 
   if (wp_mail($to, $subject, $body, $headers)){

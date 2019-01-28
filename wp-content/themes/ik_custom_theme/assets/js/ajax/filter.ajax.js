@@ -30,7 +30,7 @@
       });
     }
 
-    filter();
+    // filter();
 
     $('.filter_form').change(function(e){
 

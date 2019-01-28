@@ -40,7 +40,11 @@ get_header();?>
   <section class="full what">
     <div class="explanation">
       <h1>Inspiratiedag kinderopvang <br>is het grootste evenement <br>voor kinderopvanginitiatieven</h1>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+      <p>Op dinsdag 30 april 2019 is het weer zover: dé Inspiratiedag Kinderopvang.
+We zijn blij jullie dit gevarieerde programma te mogen voorstellen: interactieve workshops, lezingen, een debat, goede praktijken,… Nieuw deze editie zijn de plaatsbezoeken. Bezoek een opvang met knappe buitenruimte, een kerk die omgebouwd wordt tot iets prachtig,…
+Tijdens de lunchpauze kan je de lokale praktijkenmarkt bezoeken. Stel zelf je programma samen, een plaatsbezoek, een uitgebreid bezoek aan de praktijkenmarkt, een korte sessie gevolgd door een lange,… voor ieder wat wils.
+We sluiten de dag af met een Michel Vandenbroeck en de uitreiking van de gouden kinderschoen 2019.
+</p>
       <button type="button" name="Schrijf je nu in!" class="cta">Schrijf je nu in</button>
     </div>
     <div class="squirel"></div>
@@ -48,7 +52,7 @@ get_header();?>
   <section class="full why">
     <div class="explanation">
       <h2>Een waaier aan interessante lezingen, goede praktijken en werkbezoeken</h2>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+      <p>We bieden een selectie aan interessante en verruimende sessies. Je kan jouw programma zelf samenstellen; zo ben je zeker dat je geen dubbele boekingen maakt!</p>
       <button type="button" name="Maak jouw programma" class="minor">Maak jouw programma</button>
     </div>
   </section>
@@ -68,10 +72,10 @@ get_header();?>
         <div class="pi_box_outer">
           <h3>Prijs</h3>
           <div class="pi_box_inner price">
-            <p class="large">&euro; 250;-</p>
-            <p class="small">per persoon</p>
-            <p class="large">&euro; 1000;-</p>
-            <p class="small">vanaf 5 personen</p>
+            <p class="large">&euro; 95;-</p>
+            <p class="small">voor leden</p>
+            <p class="large">&euro; 145;-</p>
+            <p class="small">voor niet-leden</p>
           </div>
         </div>
       </div>
@@ -79,7 +83,7 @@ get_header();?>
     <section class="aside" role="aside">
       <div class="wistjedatje">
         <h2>Wist je dat ...?</h2>
-        <p>… er vorig jaar 122 goede praktijken van 66 verschillende gemeentes en initiatieven met 6.000 aanwezigen gedeeld werden?</p>
+        <p>Wist je dat je kan kiezen uit meer dan 40 sessies? Je kan kiezen uit lezingen, interactieve workshops, plaatsbezoeken, infosessies en een debat.</p>
         <button type="button" name="button" class="minor">MEER WEETJES</button>
       </div>
     </section>

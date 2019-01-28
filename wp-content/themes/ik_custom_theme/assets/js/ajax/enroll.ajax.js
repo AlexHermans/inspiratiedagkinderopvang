@@ -30,6 +30,10 @@
         titel : $('.ronde_onthaal').find('.session_title').text(),
         uur : $('.ronde_onthaal').find('.session_time').text()
       },
+      start : {
+        titel : $('.ronde_start').find('.session_title').text(),
+        uur : $('.ronde_start').find('.session_time').text()
+      },
       ronde_1 : {
         titel : $('.ronde_1').find('.session_title').text(),
         uur : $('.ronde_1').find('.session_time').text()

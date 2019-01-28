@@ -313,9 +313,22 @@ h1{
 
 footer{
   padding: 4vh;
-  height: 8vh;
   width: 100%;
   background-color: $red;
+  display: flex;
+  flex-direction: row;
+
+  p{
+    color:white;
+  }
+
+  img{
+    position: relative;
+    height: 50%;
+    width: 3%;
+    top: -10px;
+    margin-left: 10px;
+  }
 }
 
 .infinite{
@@ -369,6 +382,7 @@ footer{
 
 .sessie{
   margin: 4em 0 0 8em;
+  width: 70vw;
 
   .sessie_info{
     flex-direction:column;
@@ -393,6 +407,24 @@ footer{
     line-height: 135%;
     max-width: 61%;
     margin: 0.5em 0;
+  }
+
+  h4{
+    font-weight: 900;
+  }
+
+  .content{
+    margin: 1em 0;
+    flex-direction: column;
+  }
+
+  .sessie_audience{
+    margin: 2em 0;
+  }
+
+  .original{
+    color: $red;
+    border-bottom: 1px solid $red;
   }
 }
 
@@ -450,6 +482,10 @@ footer{
 
 //special styles
 
+  strong{
+    font-weight: 900;
+  }
+
 .index_error{
   align-self: center;
   text-align: center;
@@ -473,9 +509,6 @@ footer{
     margin-bottom: 1em;
   }
 
-  strong{
-    font-weight: 900;
-  }
 
   .bee_404 {
     background-image: url('assets/images/bij.png');

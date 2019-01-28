@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the front page
+ * The template for displaying the praktijkenmarkt page
  *
  * Contains the closing of the #content div and all content after.
  *
@@ -19,9 +19,10 @@ get_header();?>
 
 <main>
   <section class="infinite">
-    <h1>Inspiratiebeurs</h1>
+    <h1>Praktijkenmarkt</h1>
     <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-      <?php echo the_content(); ?>
+      <h3><?php echo the_title(); ?></h3>
+      <p><?php echo get_the_content(); ?></p>
     <?php endwhile; endif;?>
   </section>
 </main>
