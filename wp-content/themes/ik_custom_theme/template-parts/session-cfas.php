@@ -93,7 +93,7 @@
              $('.session_content').toggleClass('loading')
 
              Cookies.set('helper_step_id', 2, {expires: 365, path: ''});
-             $('.helper').html('<h3>Klik om deze sessie te reserveren</h3>')
+             $('.helper').html('<h3>Klik om deze sessie te selecteren</h3>')
              $('.session_content').after($('.helper'));
              $('.helper').attr('id', 'current_step_2')
            },

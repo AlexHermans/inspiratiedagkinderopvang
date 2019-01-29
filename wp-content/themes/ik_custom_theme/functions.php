@@ -4,12 +4,18 @@ define ('theme_dir', get_stylesheet_directory_uri());
 
 // Registratie van de CSS
 function ik_enqueue_css(){
+  global $is_IE;
+
   wp_enqueue_style('reset', 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
   // Registratie van specifieke CSS'en
   if (is_page('home')){
     wp_enqueue_style('fs', theme_dir.'/assets/css/splash.css');
+  }
+
+  if($is_IE){
+    wp_enqueue_style('ie-css', theme_dir.'/assets/css/ie.css');
   }
 }
 

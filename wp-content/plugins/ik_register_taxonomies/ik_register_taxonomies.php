@@ -89,17 +89,17 @@ function ik_create_location_taxonomy() {
 function ik_create_session_type_taxonomy() {
 	// Add new taxonomy, make it hierarchical (like categories)
 	$labels = array(
-		'name'              => _x( 'Sessie Types', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Sessie Type', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Zoek Sessie Types', 'textdomain' ),
-		'all_items'         => __( 'Alle Sessie Types', 'textdomain' ),
-		'parent_item'       => __( 'Bovenliggend Sessie Type', 'textdomain' ),
-		'parent_item_colon' => __( 'Bovenliggend Sessie Type:', 'textdomain' ),
-		'edit_item'         => __( 'Bewerk Sessie Type', 'textdomain' ),
-		'update_item'       => __( 'Update Sessie Type', 'textdomain' ),
-		'add_new_item'      => __( 'Voeg nieuw Sessie Type toe', 'textdomain' ),
-		'new_item_name'     => __( 'Nieuwe Sessie Type naam', 'textdomain' ),
-		'menu_name'         => __( 'Sessie Type', 'textdomain' ),
+		'name'              => _x( 'Types', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Type', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Zoek Types', 'textdomain' ),
+		'all_items'         => __( 'Alle Types', 'textdomain' ),
+		'parent_item'       => __( 'Bovenliggend Type', 'textdomain' ),
+		'parent_item_colon' => __( 'Bovenliggend Type:', 'textdomain' ),
+		'edit_item'         => __( 'Bewerk Type', 'textdomain' ),
+		'update_item'       => __( 'Update Type', 'textdomain' ),
+		'add_new_item'      => __( 'Voeg nieuw Type toe', 'textdomain' ),
+		'new_item_name'     => __( 'Nieuwe Type naam', 'textdomain' ),
+		'menu_name'         => __( 'Type', 'textdomain' ),
 	);
 
 	$args = array(
@@ -175,6 +175,6 @@ add_action('init', 'ik_create_round_taxonomy');
 add_action('init', 'ik_create_location_taxonomy');
 add_action('init', 'ik_create_session_type_taxonomy');
 add_action('init', 'ik_create_praktijk_type_taxonomy');
-add_action('init', 'ik_create_categorie_2_taxonomy');
+// add_action('init', 'ik_create_categorie_2_taxonomy');
 
 ?>

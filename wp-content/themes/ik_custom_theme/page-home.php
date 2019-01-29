@@ -40,11 +40,12 @@ get_header();?>
   <section class="full what">
     <div class="explanation">
       <h1>Inspiratiedag kinderopvang <br>is het grootste evenement <br>voor kinderopvanginitiatieven</h1>
-      <p>Op dinsdag 30 april 2019 is het weer zover: dé Inspiratiedag Kinderopvang.
-We zijn blij jullie dit gevarieerde programma te mogen voorstellen: interactieve workshops, lezingen, een debat, goede praktijken,… Nieuw deze editie zijn de plaatsbezoeken. Bezoek een opvang met knappe buitenruimte, een kerk die omgebouwd wordt tot iets prachtig,…
-Tijdens de lunchpauze kan je de lokale praktijkenmarkt bezoeken. Stel zelf je programma samen, een plaatsbezoek, een uitgebreid bezoek aan de praktijkenmarkt, een korte sessie gevolgd door een lange,… voor ieder wat wils.
-We sluiten de dag af met een Michel Vandenbroeck en de uitreiking van de gouden kinderschoen 2019.
-</p>
+      <p>Op dinsdag 30 april 2019 is het weer zover: dé Inspiratiedag Kinderopvang van het VVSG-Steunpunt Kinderopvang.
+We zijn blij jullie alweer een gevarieerd programma te kunnen aanbieden: talrijke interactieve workshops, lezingen, een debat, goede praktijken enz. over allerlei actuele thema’s en uitdagingen waar elke kinderopvang voor staat.
+Nieuw dit jaar zijn de plaatsbezoeken: bezoek een opvang met knappe buitenruimte, een kerk die omgebouwd wordt tot iets prachtig enz. Tijdens de lunchpauze kan je de lokale praktijkenmarkt bezoeken.
+We sluiten de dag af met Prof. Dr. Michel Vandenbroeck die de kinderopvang beschrijft als een bijzondere plek, waar het meest private en publieke samenkomen. Ouders vertrouwen hun kind, hun dierbaarste bezit, toe aan de kinderopvang waarmee ze de opvoeding van hun kind delen. Maar deze kinderopvang is ook een plek van beleid en van politiek. Van lokaal beleid ook. En dus stelt Michel Vandenbroeck een lastig vraag, ook aan de lokale besturen: zijn de zaken zoals ze moeten zijn?
+Feestelijk afsluiten doen we met de uitreiking van de Gouden Kinderschoen 2019.
+Wij hopen jullie alvast te mogen verwelkomen.</p>
       <button type="button" name="Schrijf je nu in!" class="cta">Schrijf je nu in</button>
     </div>
     <div class="squirel"></div>
@@ -52,7 +53,8 @@ We sluiten de dag af met een Michel Vandenbroeck en de uitreiking van de gouden 
   <section class="full why">
     <div class="explanation">
       <h2>Een waaier aan interessante lezingen, goede praktijken en werkbezoeken</h2>
-      <p>We bieden een selectie aan interessante en verruimende sessies. Je kan jouw programma zelf samenstellen; zo ben je zeker dat je geen dubbele boekingen maakt!</p>
+      <p>Op de Inspiratiedag Kinderopvang kan je drie sessies volgen, tenzij je in sessie 1 kiest voor sessie 1.13 tot en met 1.18. Deze sessies (o.a. een plaatsbezoek) duren een ganse voormiddag, waardoor je dit enkel kan combineren met een sessie in de namiddag. Er zijn sessies die 1u15min (kort) duren, sessies die 1u30min (lang) duren en sessies die 2u45 min duren (extra lang).
+Let op! Voor sommige sessies zijn de plaatsen beperkt, schrijf dus tijdig in.</p>
       <button type="button" name="Maak jouw programma" class="minor">Maak jouw programma</button>
     </div>
   </section>

@@ -63,10 +63,6 @@ get_header(); ?>
         <div class="content">
           <?php echo the_content(); ?>
         </div>
-        <div class="category_box">
-          <h4>Categorieën</h4>
-          <?php echo $category_html ?>
-        </div>
       </div>
   <?php endwhile; endif;?>
   </section>

@@ -1,0 +1,20 @@
+/* This CSS handles specific IE weirdness. It's only loaded if  */
+/* the browser has been detected as IE (and recognised as such by using */
+/* the global $is_IE) */
+
+main > *:first-of-type,
+.front-splash{
+  margin-top: 10vh;
+}
+
+.sessie{
+  margin-top: 20vh !important;
+}
+
+.plant-2{
+  right: -173px;
+}
+
+.plant-4{
+  right: -54px;
+}

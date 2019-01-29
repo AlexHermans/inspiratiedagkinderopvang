@@ -45,7 +45,7 @@ get_header();
       'completed' => false,
     ),
     array (
-      'title' => 'Klik hier om deze sessie te reserveren',
+      'title' => 'Klik hier om deze sessie te selecteren',
       'subtitle' => '',
       'completed' => false,
     ),
@@ -72,16 +72,16 @@ get_header();
         </div>
         <div class="session_field_inner disabled">
           <h3 class="session_title">Onthaal</h3>
-          <p class="session_time">09u00 - 09u30</p>
+          <p class="session_time">08u30 - 09u30</p>
         </div>
       </div>
       <div class="session_field_outer ronde_start" data-ronde="start">
         <div class="label">
           <div class="label_indicator correct"></div>
-          <p>Gezamelijke start</p>
+          <p>Feestelijke start</p>
         </div>
         <div class="session_field_inner disabled">
-          <h3 class="session_title">Gezamelijke start</h3>
+          <h3 class="session_title">Feestelijke start</h3>
           <p class="session_time">09u30 - 09u45</p>
         </div>
       </div>
@@ -134,7 +134,7 @@ get_header();
                   12u30 - 13u30
                 <?php endif;?>
               <?php else: ?>
-                Kies een sessie in Ronde 1 om een tijd te zien.
+                De duur van je pauze hangt af van welke sessie je volgt. Plan je dag en sessies zo dat je tijdens de middagpauze zeker voldoende tijd hebt om een bezoek te brengen aan de beurs. Laat je inspireren door tal van lokale praktijken en bedrijven die hun aanbod voorstellen.
               <?php endif;?>
           </p>
         </div>
@@ -161,7 +161,7 @@ get_header();
           <p>Plenair</p>
         </div>
         <div class="session_field_inner disabled">
-          <h3 class="session_title">Inhoudelijke afsluiter met Michel Vandenbroek<br>Uitreiking Gouden Kinderschoen, door Mieck Vos, directeur VVSG</h3>
+          <h3 class="session_title">"De staat van het kind. Het kind van de staat” door Prof. Dr. Michel Vandenbroeck<br>Uitreiking Gouden Kinderschoen door Mieck Vos, directeur VVSG</h3>
           <p class="session_time">15u15 - 16u15</p>
         </div>
       </div>  <div class="session_field_outer ronde_receptie" data-ronde="receptie">
@@ -170,7 +170,7 @@ get_header();
             <p>Receptie</p>
           </div>
           <div class="session_field_inner disabled">
-            <h3 class="session_title">Receptie</h3>
+            <h3 class="session_title">Afsluiter met een zoet hapje en drankje</h3>
             <p class="session_time">16u15 - ...</p>
           </div>
         </div>

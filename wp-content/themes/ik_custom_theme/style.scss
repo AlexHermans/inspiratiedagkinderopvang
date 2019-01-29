@@ -306,6 +306,7 @@ button.minor{
   margin: 4em;
   justify-content: space-between;
   max-height: 50%;
+  width: 100%;
 }
 h1{
 
@@ -380,6 +381,17 @@ footer{
    }
 }
 
+.praktijken{
+
+  .praktijk_header{
+    width: 60%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+  }
+}
 .sessie{
   margin: 4em 0 0 8em;
   width: 70vw;
@@ -536,7 +548,7 @@ footer{
     position: fixed;
     BOTTOM: 2em;
     right: 2em;
-    width: initial;
+    width: inherit;
     text-transform: initial;
     padding: 1em 1.5em;
     transition: all 250ms;
