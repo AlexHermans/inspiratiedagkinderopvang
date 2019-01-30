@@ -201,13 +201,9 @@ get_header();
   <div class="registration_information hidden">
     <div class="overlay hidden"></div>
     <form class="reg_info" action="#" method="post">
-      <legend>We hebben nu nog enkel wat extra informatie nodig.</legend>
-      <label for="voonaam">Voornaam</label>
-      <input type="text" name="voornaam" id="voornaam" value="">
-      <label for="achternaam">Achternaam</label>
-      <input type="text" name="achternaam" id="achternaam" value="">
-      <label for="e-mail">E-mailadres</label>
-      <input type="e-mail" name="e-mail" id="e-mail" value="">
+      <legend>Je programma is bijna compleet</legend>
+      <p>Je hebt nu bijna een volledig programma. Het enige wat overblijft is om je inschrijving te voltooien via de academie.vvsg.be website.</p>
+      <p>Klik op de knop hieronder om naar de website te gaan, log in en schrijf je in voor de sessies die je hier gekozen hebt.</p>
       <button type="button" name="enroll" id="enroll_all" class="cta">Inschrijving voltooien</button>
     </form>
   </div>
