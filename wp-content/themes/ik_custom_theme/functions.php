@@ -166,9 +166,41 @@ function ik_ajax_search(){
     'post_type' => 'sessie',
     'post_status' => 'publish'
   );
+  //
+  // $pre_search = new WP_Query($args);
+  //
+  // //pre-search if searching for keyword comes up empty
+  // if (!$pre_search->have_posts()){
+  //   echo 'empty';
+  //
+  //   //initializing the tax query array
+  //   $tax_args = array (
+  //     'relation' => 'OR'
+  //   );
+  //
+  //   $taxonomies = get_taxonomies('names');
+  //
+  //   foreach ($taxonomies as $k => $v){
+  //     $tax_args.push(array(
+  //       'taxonomy' => $v,
+  //       'field' =>
+  //     ))
+  //   }
+  //
+  //   $args = array(
+  //     'tax_query' => array(
+  //       'relation' => 'or',
+  //       array (
+  //         'taxonomy' =>
+  //       )
+  //     )
+  //   )
+  // } else {
+  //   echo 'found';
+  // }
 
-    set_query_var('args', $args);
-    get_template_part('template-parts/session', 'all-sessions');
+  set_query_var('args', $args);
+  get_template_part('template-parts/session', 'all-sessions');
 
     die();
 }

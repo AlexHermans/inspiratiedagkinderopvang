@@ -46,7 +46,7 @@ Nieuw dit jaar zijn de plaatsbezoeken: bezoek een opvang met knappe buitenruimte
 We sluiten de dag af met Prof. Dr. Michel Vandenbroeck die de kinderopvang beschrijft als een bijzondere plek, waar het meest private en publieke samenkomen. Ouders vertrouwen hun kind, hun dierbaarste bezit, toe aan de kinderopvang waarmee ze de opvoeding van hun kind delen. Maar deze kinderopvang is ook een plek van beleid en van politiek. Van lokaal beleid ook. En dus stelt Michel Vandenbroeck een lastig vraag, ook aan de lokale besturen: zijn de zaken zoals ze moeten zijn?
 Feestelijk afsluiten doen we met de uitreiking van de Gouden Kinderschoen 2019.
 Wij hopen jullie alvast te mogen verwelkomen.</p>
-      <button type="button" name="Schrijf je nu in!" class="cta">Schrijf je nu in</button>
+      <a style="color:white" href="<?php echo get_permalink(get_page_by_path('programma'));?>"><button type="button" name="Schrijf je nu in!" class="cta">Schrijf je nu in</button></a>
     </div>
     <div class="squirel"></div>
   </section>
@@ -55,7 +55,7 @@ Wij hopen jullie alvast te mogen verwelkomen.</p>
       <h2>Een waaier aan interessante lezingen, goede praktijken en werkbezoeken</h2>
       <p>Op de Inspiratiedag Kinderopvang kan je drie sessies volgen, tenzij je in sessie 1 kiest voor sessie 1.13 tot en met 1.18. Deze sessies (o.a. een plaatsbezoek) duren een ganse voormiddag, waardoor je dit enkel kan combineren met een sessie in de namiddag. Er zijn sessies die 1u15min (kort) duren, sessies die 1u30min (lang) duren en sessies die 2u45 min duren (extra lang).
 Let op! Voor sommige sessies zijn de plaatsen beperkt, schrijf dus tijdig in.</p>
-      <button type="button" name="Maak jouw programma" class="minor">Maak jouw programma</button>
+      <a style="color:inherit" href="<?php echo get_permalink(get_page_by_path('programma'));?>"><button type="button" name="Maak jouw programma" class="minor">Maak jouw programma</button></a>
     </div>
   </section>
   <section class="full extra">
@@ -85,8 +85,10 @@ Let op! Voor sommige sessies zijn de plaatsen beperkt, schrijf dus tijdig in.</p
     <section class="aside" role="aside">
       <div class="wistjedatje">
         <h2>Wist je dat ...?</h2>
-        <p>Wist je dat je kan kiezen uit meer dan 40 sessies? Je kan kiezen uit lezingen, interactieve workshops, plaatsbezoeken, infosessies en een debat.</p>
-        <button type="button" name="button" class="minor">MEER WEETJES</button>
+        <div class="wistjedatje_content">
+          <?php set_query_var('args', array('post_type' => 'wistjedatje', 'post_status' => 'publish')); ?>
+          <?php get_template_part('template-parts/wistjedatje', 'content') ?>
+        </div>
       </div>
     </section>
     </section>

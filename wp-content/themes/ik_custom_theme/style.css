@@ -290,13 +290,26 @@ footer {
     font-size: 100%;
     text-decoration: underline; }
 
+.praktijken h3 {
+  width: 90%; }
+.praktijken p {
+  width: 55%; }
+.praktijken .praktijk_inner {
+  display: flex;
+  flex-direction: row; }
+.praktijken .praktijk_outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+.praktijken .praktijk_wrapper {
+  width: 50%; }
 .praktijken .praktijk_header {
-  width: 60%;
+  width: 250px;
   height: 250px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 1em; }
+  margin: 0 1em 2em 0; }
 
 .sessie {
   margin: 4em 0 0 8em;
@@ -684,8 +697,7 @@ strong {
     margin-bottom: 1em; }
 
 .filters {
-  margin: 6em 0 0 4em;
-  width: 35vw; }
+  margin: 6em 0 0 4em; }
   .filters .filter_form {
     padding: 2em;
     background-color: #f8f8f8; }
